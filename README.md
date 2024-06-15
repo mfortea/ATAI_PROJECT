@@ -18,7 +18,7 @@ source atai_project/bin/activate
 ## 📄 Dependencies
 This project uses the followig Python3 dependencies:
 ```bash
-pip3 install pandas scikit-learn
+pip3 install pandas scikit-learn matplotlib
 ```
 
 ## 🚀 Running the code
