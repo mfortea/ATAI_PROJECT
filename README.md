@@ -7,7 +7,7 @@ This project has been created over a Python3 virtual enviroment.
 
 Create a virtual environment:
 ```bash
-python -m venv atai_project
+python3 -m venv atai_project
 ```
 
 Activate the enviroment

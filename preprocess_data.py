@@ -23,3 +23,4 @@ for column in ['gender', 'smoking_history']:
 # Save the cleaned dataset
 clean_file_path = 'data/cleaned_diabetes_dataset.csv'
 data.to_csv(clean_file_path, index=False)
+print("Generated " + clean_file_path)

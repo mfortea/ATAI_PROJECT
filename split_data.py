@@ -13,3 +13,5 @@ train_file_path = 'data/train_diabetes_dataset.csv'
 test_file_path = 'data/test_diabetes_dataset.csv'
 train_data.to_csv(train_file_path, index=False)
 test_data.to_csv(test_file_path, index=False)
+print("Generated " + train_file_path)
+print("Generated " + test_file_path)

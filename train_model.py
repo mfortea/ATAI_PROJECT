@@ -18,3 +18,4 @@ model.fit(X_train, y_train)
 # Save the trained model
 model_file_path = 'models/diabetes_model.pkl'
 joblib.dump(model, model_file_path)
+print("Generated model in " + model_file_path)
