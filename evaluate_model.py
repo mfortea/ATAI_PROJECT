@@ -3,7 +3,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 import joblib
 
 # Load the test dataset
-test_file_path = 'data/test_diabetes_dataset.csv'
+test_file_path = 'data/test_dataset.csv'
 test_data = pd.read_csv(test_file_path)
 
 # Load the trained model

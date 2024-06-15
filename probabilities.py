@@ -1,10 +1,18 @@
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
 
 # Load the cleaned dataset
 filepath = 'data/cleaned_diabetes_dataset.csv'
 df_cleaned = pd.read_csv(filepath)
+
+# Encode categorical variables
+label_encoders = {}
+for column in ['gender', 'smoking_history']:
+    le = LabelEncoder()
+    df_cleaned[column] = le.fit_transform(df_cleaned[column])
+    label_encoders[column] = le
 
 # Split data into training and testing sets
 X = df_cleaned.drop('diabetes', axis=1)
@@ -75,7 +83,7 @@ for column, values in probabilities.items():
             values[value] = (values[value][0] / total_prob, values[value][1] / total_prob)
 
 # Save the probabilities to a CSV file
-output_file = 'probabilities.csv'
+output_file = 'data/probabilities.csv'
 with open(output_file, 'w') as f:
     f.write("Variable,Value,Prob_with_diabetes,Prob_without_diabetes\n")
     for variable, values in probabilities.items():

@@ -4,7 +4,7 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 # Load the training dataset
-train_file_path = 'data/train_diabetes_dataset.csv'
+train_file_path = 'data/train_dataset.csv'
 train_data = pd.read_csv(train_file_path)
 
 # Separate features and labels
