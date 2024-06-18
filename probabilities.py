@@ -49,7 +49,7 @@ for column in X.columns:
             total_count = np.sum(age_bins == value)
         elif column == 'bmi':
             count_with_diabetes = np.sum((bmi_bins == value) & (df_cleaned['diabetes'] == 1))
-            count_without_diabetes = np.sum((bmi_bins == value) & (df_cleaned['diabetes'] == 0))
+            count_without_diabetes = np.sum((bmi_bins == value) & (df_cleaned['diabetes'] == 0))    
             total_count = np.sum(bmi_bins == value)
         elif column == 'blood_glucose_level':
             count_with_diabetes = np.sum((glucose_bins == value) & (df_cleaned['diabetes'] == 1))

@@ -1,3 +1,4 @@
+%%% ATAI - DIABETES PROBLOG MODEL %%%
 % Variables definition / Possible values
 0.5::gender(0); 0.5::gender(1).
 0.33::age(old); 0.33::age(middle_aged); 0.34::age(young).
@@ -40,5 +41,42 @@
 0.10809608540925267::diabetes :- blood_glucose_level(prediabetic).
 1.0::diabetes :- blood_glucose_level(diabetic).
 
-% Queries
+%%% Evidences for Profile 1 %%%
+evidence(gender(1)).  % Male
+evidence(age(young)).  % Young
+evidence(hypertension(0)).  % No hypertension
+evidence(heart_disease(0)).  % No heart disease
+evidence(smoking_history(1)).  % Light smoking history
+evidence(bmi(overweight)).  % Overweight
+evidence(hba1c_level(normal)).  % Normal HbA1c level
+evidence(blood_glucose_level(diabetic)).  % Diabetic blood glucose level
+
+%%% Query %%%
+query(diabetes).
+
+
+%%% Evidences for Profile 2 %%%
+evidence(gender(0)).  % Female
+evidence(age(old)).  % Old
+evidence(hypertension(1)).  % Hypertension
+evidence(heart_disease(1)).  % Heart disease
+evidence(smoking_history(3)).  % Moderate smoking history
+evidence(bmi(obese)).  % Obese
+evidence(hba1c_level(diabetic)).  % Diabetic HbA1c level
+evidence(blood_glucose_level(normal)).  % Normal blood glucose level
+
+%%% Query %%%
+query(diabetes).
+
+%%% Evidences for Profile 3 %%%
+evidence(gender(1)).  % Male
+evidence(age(middle_aged)).  % Middle-aged
+evidence(hypertension(0)).  % No hypertension
+evidence(heart_disease(0)).  % No heart disease
+evidence(smoking_history(0)).  % Non-smoker
+evidence(bmi(underweight_normal)).  % Normal or underweight
+evidence(hba1c_level(prediabetic)).  % Prediabetic HbA1c level
+evidence(blood_glucose_level(normal)).  % Normal blood glucose level
+
+%%% Query %%%
 query(diabetes).
